@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>662</width>
-    <height>463</height>
+    <width>970</width>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -172,14 +172,14 @@
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,6">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,0">
       <property name="sizeConstraint">
        <enum>QLayout::SetFixedSize</enum>
       </property>
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+         <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -191,6 +191,27 @@
          <string>GIVE ANOTHER WORD</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QCheckBox" name="checkBox_show_images">
+          <property name="text">
+           <string>show images of words</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>feature update</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
        <spacer name="verticalSpacer">
@@ -214,7 +235,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>662</width>
+     <width>970</width>
      <height>21</height>
     </rect>
    </property>
