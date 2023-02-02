@@ -9,8 +9,6 @@ import config
 
 
 class MyGUI(QMainWindow):
-    i = 0
-
     def __init__(self):
         super(MyGUI, self).__init__()
         uic.loadUi("data/menu/mygui.ui", self)
@@ -25,8 +23,8 @@ class MyGUI(QMainWindow):
         self.label_en_trans.setText(self.list_of_words[rand][:-1])
         self.label_pl_trans.setText(Translator().translate(self.list_of_words[rand][:-1], dest='pl', src="en").text)
 
-        #PHOTO DOWNLOADER
-        if os.path.exists("data/assets/pictures/"+self.list_of_words[rand][:-1]+".jpg") != True:
+        # images downloader
+        if not os.path.exists("data/assets/pictures/"+self.list_of_words[rand][:-1]+".jpg") and self.checkBox_show_images.isChecked():
             gis = GoogleImagesSearch(config.api_key, config.cx_key)
             _search_params = {
                 "q": self.list_of_words[rand],
