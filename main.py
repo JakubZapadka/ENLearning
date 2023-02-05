@@ -1,5 +1,5 @@
-from PyQt6.QtWidgets import *
 from PyQt6.QtGui import QIcon, QPixmap
+from PyQt6.QtWidgets import *
 from PyQt6 import uic
 import random
 from googletrans import Translator

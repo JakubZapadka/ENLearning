@@ -6,14 +6,62 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>970</width>
-    <height>612</height>
+    <width>965</width>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	font-family: Sans-serif;
+	color: white;
+}
+
+#centralwidget{
+	background-color: #0A2647;
+}
+
+#label_en_trans, #label_pl_trans{
+	background-color: #144272;
+	padding-left: 5px;
+}
+
+#label_en, #label_pl{
+	border: 2px solid #144272;
+}
+
+#pushButton{
+	border: 2px solid #144272;
+	padding: 10px;
+	background-color: #205295;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#pushButton:hover{
+	background-color: #144272;
+}
+
+#pushButton_2{
+	border: 2px solid #144272;
+	padding: 3px;
+	background-color: #205295;
+	border-radius: 10px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#pushButton_2:hover{
+	background-color: #144272;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
     <property name="leftMargin">
      <number>20</number>
@@ -35,7 +83,7 @@
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <property name="spacing">
-         <number>6</number>
+         <number>0</number>
         </property>
         <property name="sizeConstraint">
          <enum>QLayout::SetDefaultConstraint</enum>
@@ -49,19 +97,33 @@
            <bool>true</bool>
           </property>
           <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>28</width>
+            <height>28</height>
+           </size>
+          </property>
           <property name="font">
            <font>
-            <family>Segoe MDL2 Assets</family>
             <pointsize>16</pointsize>
            </font>
           </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
           <property name="text">
-           <string>en:</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>langs_logos/united-kingdom.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -78,12 +140,14 @@
           </property>
           <property name="font">
            <font>
-            <family>Segoe MDL2 Assets</family>
             <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
           </property>
           <property name="text">
            <string/>
@@ -100,6 +164,9 @@
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QLabel" name="label_pl">
           <property name="sizePolicy">
@@ -108,14 +175,25 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="maximumSize">
+           <size>
+            <width>28</width>
+            <height>28</height>
+           </size>
+          </property>
           <property name="font">
            <font>
-            <family>Segoe MDL2 Assets</family>
             <pointsize>16</pointsize>
            </font>
           </property>
           <property name="text">
-           <string>pl:</string>
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>langs_logos/poland.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -126,7 +204,6 @@
           </property>
           <property name="font">
            <font>
-            <family>Segoe MDL2 Assets</family>
             <pointsize>16</pointsize>
            </font>
           </property>
@@ -172,7 +249,7 @@
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,0">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0,0,0">
       <property name="sizeConstraint">
        <enum>QLayout::SetFixedSize</enum>
       </property>
@@ -184,11 +261,17 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="layoutDirection">
          <enum>Qt::LeftToRight</enum>
         </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
-         <string>GIVE ANOTHER WORD</string>
+         <string>next word</string>
         </property>
        </widget>
       </item>
@@ -196,20 +279,68 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <widget class="QCheckBox" name="checkBox_show_images">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="text">
            <string>show images of words</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QCheckBox" name="checkBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>own words</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QCheckBox" name="checkBox">
+         <widget class="QPushButton" name="pushButton_2">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
           <property name="text">
-           <string>feature update</string>
+           <string>Select file</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </item>
@@ -235,8 +366,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>970</width>
-     <height>21</height>
+     <width>965</width>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuApp_to_learn_english">
@@ -248,8 +379,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="test.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
